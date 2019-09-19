@@ -40,7 +40,8 @@ jobs:
           command: |
             ci_scripts/ci_tool.sh --run_release
             VERSION=$(cat .version)
-            npm run build -- --progress=false --base-href /${CIRCLE_PROJECT_REPONAME}/${VERSION}/
+            npm run build
+            rm -rf dist && mv build dist
       - persist_to_workspace:
           root: ./
           paths:
