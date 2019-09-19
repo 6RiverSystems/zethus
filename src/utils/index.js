@@ -8,6 +8,7 @@ import {
   MESSAGE_TYPE_ODOMETRY,
   MESSAGE_TYPE_POINTSTAMPED,
   MESSAGE_TYPE_POSEARRAY,
+  MESSAGE_TYPE_POLYGONSTAMPED,
   MESSAGE_TYPE_PATH,
   MESSAGE_TYPE_IMAGE,
   MESSAGE_TYPE_MARKER,
@@ -26,6 +27,7 @@ import {
   VIZ_TYPE_POINTCLOUD,
   VIZ_TYPE_POSE,
   VIZ_TYPE_POSEARRAY,
+  VIZ_TYPE_POLYGON,
   VIZ_TYPE_RANGE,
   VIZ_TYPE_ROBOTMODEL,
   VIZ_TYPE_TF,
@@ -137,6 +139,13 @@ export const vizOptions = [
     description: `Adds a visualization represented by a geometry_msgs/PoseArray topic to the scene. An array of pose is added to the scene based on the Shape type selected.
     ![](/image/viz/viz-posearray.png "")`,
     docsLink: `${DOCS_ROOT_URL}Pose-Array`,
+  },
+  {
+    type: VIZ_TYPE_POLYGON,
+    icon: '/image/icons/icon_pose_array.svg',
+    messageTypes: [MESSAGE_TYPE_POLYGONSTAMPED],
+    description: ``,
+    docsLink: `${DOCS_ROOT_URL}Polygon`
   },
   {
     type: VIZ_TYPE_RANGE,
