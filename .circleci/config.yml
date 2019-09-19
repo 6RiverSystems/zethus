@@ -54,6 +54,9 @@ jobs:
       - attach_workspace:
           at: ./
       - run:
+          name: install jq
+          command: apk add --no-cache jq
+      - run:
           name: Publish
           command: |
             ci_scripts/ci_tool.sh --frontend_app_publish
