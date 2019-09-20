@@ -23,6 +23,7 @@ import MarkerOptions from './marker';
 import OdometryOptions from './odometry';
 import PathOptions from './path';
 import PoseOptions from './pose';
+import PolygonOptions from './polygon';
 import PointCloudOptions from './pointcloud';
 import RangeOptions from './range';
 import PointOptions from './point';
@@ -68,6 +69,10 @@ const VizSpecificOptions = ({
       return (
         <PointOptions options={options} updateVizOptions={updateVizOptions} />
       );
+    case VIZ_TYPE_POLYGON:
+      return (
+        <PolygonOptions options={options} updateVizOptions={updateVizOptions} />
+      );
     case VIZ_TYPE_POINTCLOUD:
       return (
         <PointCloudOptions
@@ -75,8 +80,6 @@ const VizSpecificOptions = ({
           updateVizOptions={updateVizOptions}
         />
       );
-    case VIZ_TYPE_POLYGON:
-      return null;
     case VIZ_TYPE_POSE:
       return (
         <PoseOptions options={options} updateVizOptions={updateVizOptions} />
