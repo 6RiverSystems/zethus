@@ -80,7 +80,6 @@ class Wrapper extends React.Component {
 
   refreshRosData() {
     this.ros.getTopics(rosTopics => {
-      console.log(`Got ros topics: ${JSON.stringify(rosTopics)}`);
       this.setState({
         rosStatus: ROS_SOCKET_STATUSES.CONNECTED,
         rosTopics: _.map(rosTopics.topics, (name, index) => ({
