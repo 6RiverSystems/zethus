@@ -40,7 +40,7 @@ jobs:
           command: |
             ci_scripts/ci_tool.sh --run_release
             VERSION=$(cat .version)
-            PUBLIC_URL=/zethus/$VERSION
+            PUBLIC_URL=/zethus/${VERSION}
             npm run build
             rm -rf dist && mv build dist
       - persist_to_workspace:
